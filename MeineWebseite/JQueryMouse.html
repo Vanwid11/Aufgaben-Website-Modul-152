@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Die 3 Meta-Tags oben *müssen* zuerst im head stehen; jeglicher sonstiger head-Inhalt muss *nach* diesen Tags kommen -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="image/favicon.ico">
+
+    <title>LA_152_7714</title>
+
+    <!-- Bootstrap-CSS -->
+    <link href="bootstrap-5.1.0-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="bootstrap-5.1.0-dist/css/sticky-footer-navbar.css" rel="stylesheet">
+
+	<!-- Eigenes CSS -->
+	<link href="stylesheet.css" rel="stylesheet">
+
+    <!-- Nur für Testzwecke. Kopiere diese Zeilen nicht in echte Projekte! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="js/ie-emulation-modes-warning.js"></script>
+
+    <!-- Unterstützung für Media Queries und HTML5-Elemente in IE8 über HTML5 shim und Respond.js -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			$( "div.field" ).on( "mousemove", function( event ) {
+				$( ".info" ).text( "pageX: " + event.pageX + ", pageY: " + event.pageY );
+			});
+			
+			var breite = 400;
+			var hoehe = 400;			
+			var klicks = 0;
+			
+			$("#klick").click(function (ergebnis) {
+				klicks++;
+				
+				var klickX = ergebnis.offsetX;
+				var klickY = ergebnis.offsetY;
+				
+				$("#text").text("Der Klick X ist " + klickX + " der Klick Y ist " + klickY +". Sie haben " + klicks +" auf das Bild geklickt");
+			});			
+		});
+	</script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Bootstrap for dummies</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index2.html">Back to Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="bootstrap.html">Bootstrap</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="JQuery.html">JQuery</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="JQueryMove.html">JQueryOut</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="hangman.html">Hangman</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="clock.html">Clock</a>
+                  </li>
+          </div>
+        </div>
+        </nav>
+        <div class="container">
+          <div class="page-header">
+            <h1>LA_152_7716_jQueryMousePosition</h1>
+          </div>
+          <p>Bewege die Maus über das Feld</p>
+          <div class="field">
+      
+          </div>
+          <p class="info">Hier sollte die Position erscheinen</p>
+        </div>
+        
+          <div class="container">	
+          <img id="klick" src="images/klick.png" alt="KlickMich" width="400" height="400">
+          <p id="text">Hallo</p>
+        </div>	
+        
+     
+  </body>
+</html>

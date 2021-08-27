@@ -1,0 +1,43 @@
+
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}
+tr.colored td{
+    background: #fafad2;
+}
+tr.mouseon td{
+    background: rgb(255, 164, 210);
+}
+table, th, td {
+	border-collapse: collapse;
+	border: 1px solid black;
+}
+
+tr.colored td {
+	background: #fafad2;
+}
+
+tr.mouseon td {
+	background: #1e90ff;
+}
+div.field{
+	background-color: #d382e7;
+	width: 300px; 
+	height:300px;
+}
+
+img {
+	border-color: rgb(126, 48, 190);
+	border-width: 5px;
+	border-style: solid;
+}
